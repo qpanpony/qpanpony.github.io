@@ -696,13 +696,13 @@ td {
 }
 .post pre,
 .post .highlight {
-  background: #2d2d2d;
+  background: #1d1f21;
   margin: 20px 0;
   padding: 15px;
   overflow: auto;
   font-size: 13px;
-  color: #ccc;
-  line-height: 1.8;
+  color: #c5c8c6;
+  line-height: 1.2;
 }
 .post .highlight .gutter pre,
 .post .gist .gist-file .gist-data .line-numbers {
@@ -737,7 +737,7 @@ td {
 }
 .post .highlight figcaption {
   font-size: 0.85em;
-  color: #999;
+  color: #969896;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -764,7 +764,7 @@ td {
   border-style: solid;
   border-color: #ccc;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #1d1f21;
   padding: 15px 40px 15px 15px;
 }
 .post .gist .gist-file {
@@ -790,8 +790,8 @@ td {
   border: none;
 }
 .post .gist .gist-file .gist-meta {
-  background: #2d2d2d;
-  color: #999;
+  background: #1d1f21;
+  color: #969896;
   font: 13px Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   text-shadow: 0 0;
   padding: 0;
@@ -806,7 +806,7 @@ td {
   text-decoration: underline;
 }
 pre .comment {
-  color: #999;
+  color: #969896;
 }
 pre .variable,
 pre .attribute,
@@ -820,7 +820,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #f2777a;
+  color: #c66;
 }
 pre .number,
 pre .preprocessor,
@@ -828,11 +828,11 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #f99157;
+  color: #de935f;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: #9c9;
+  color: #b5bd68;
 }
 pre .string,
 pre .value,
@@ -840,11 +840,11 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #9c9;
+  color: #b5bd68;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #6cc;
+  color: #8abeb7;
 }
 pre .function,
 pre .python .decorator,
@@ -854,11 +854,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #69c;
+  color: #81a2be;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #c9c;
+  color: #b294bb;
 }
 html,
 body {
@@ -1171,7 +1171,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9f6c7;
+  background: #24fbfb;
 }
 .sidebar-nav {
   margin: 0;
@@ -1394,6 +1394,9 @@ input.menu-search-input {
 }
 .posts-expand .post-meta .post-category-list-link {
   color: #999;
+}
+.posts-expand .post-body {
+  text-align: justify;
 }
 .posts-expand .post-body h2,
 .posts-expand .post-body h3,
