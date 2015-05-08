@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-07T06:31:26.521Z</updated>
+  <updated>2015-05-08T02:57:21.407Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,10 +15,105 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[git使用总结（转发自idhyt's blog）]]></title>
+    <link href="http://yoursite.com/2015/05/08/git-conclusion/"/>
+    <id>http://yoursite.com/2015/05/08/git-conclusion/</id>
+    <published>2015-05-08T02:57:21.407Z</published>
+    <updated>2015-05-08T02:57:21.407Z</updated>
+    <content type="html"><![CDATA[<p>windows下git使用总结<a id="more"></a></p>
+<h3 id="初始化配置Github">初始化配置Github</h3><ol>
+<li><p>下载msysgit并安装 : <a href="http://msysgit.github.io/" target="_blank" rel="external">http://msysgit.github.io/</a></p>
+</li>
+<li><p>github上创建一个项目，如SmartScript</p>
+</li>
+<li><p>初始化<br> 新建Github目录并进入：cd d:\work\Github<br> git init<br> git config —global user.name “usernme” （username：GitHub的用户名）<br> git config —global user.email  “emailName” （emailName：GitHub的注册邮箱）</p>
+</li>
+<li><p>安装ssh<br> 4.1 检查SSH公钥 : cd ~/.ssh 看看存不存在.ssh</p>
+<p> 4.2 生成SSH公钥 : ssh-keygen -t rsa -C “your_email@youremail.com”</p>
+<pre><code><span class="comment"># Creates a new ssh key using the provided email Generating public/private rsa key pair.</span>
+Enter <span class="built_in">file</span> <span class="operator">in</span> which <span class="built_in">to</span> save <span class="operator">the</span> key (/user/you/.ssh/id_rsa):
+</code></pre><p> 现在你可以看到，在自己的目录下，有一个.ssh目录，说明成功了</p>
+<p> 4.3 输入github密码</p>
+<pre><code>Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]
+Enter same passphrase <span class="string">again:</span> [Type passphrase again]
+这个时候输入你在github密码。
+然后在.ssh中可以看到
+Your identification has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.
+# Your <span class="keyword">public</span> key has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.pub.
+</code></pre><p> 4.4 添加SSH公钥到github</p>
+<pre><code>打开github，找到账户里面添加SSH，把idrsa.pub内容复制到<span class="variable">key</span>里面。
+</code></pre><p> 4.5 测试是否生效</p>
+<pre><code>使用命令： ssh -T git@github.com
+当你看到这些内容放入时候，直接yes
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+看到这个内容放入时候，说明就成功了。
+![<span class="link_label">tool-editor</span>](<span class="link_url">http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-1.png</span>)
+</code></pre></li>
+<li><p>使用git add filename 将项目文件添加到库（如 git add “readme.txt”）<br> 也可以多文件夹设置，如在Github目录下创建文件夹Python并拷贝项目到该目录，然后CD 进入执行命令</p>
+</li>
+<li><p>使用git commit -m “first commit” 进行提交（”first commit” 相当于一个描述）</p>
+</li>
+<li><p>使用远程连接：git remote add origin git@github.com:username/SmartScript.git （username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
+</li>
+<li><p>输入命令“git push origin master”将源码推送到GitHub</p>
+</li>
+<li><p>在GitHub上仓库页面刷新即可看到你在本地创建并提交的文件</p>
+</li>
+</ol>
+<h3 id="删除Github上的文件(如_del-txt)">删除Github上的文件(如 del.txt)</h3><ol>
+<li>进入到对应的目录下 cd: D:\work\Github\SmartScript</li>
+<li>git rm —cached ”del.txt”</li>
+<li>git commit -m “del”</li>
+<li>git push origin master (失败先 git pull)<br><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-2.png" alt="tool-editor"></li>
+<li>另外<br> 使用 git rm 命令即可，有两种选择,<br> 一种是 git rm —cached “文件路径”，不删除物理文件，仅将该文件从缓存中删除；<br> 一种是 git rm —f “文件路径”，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。<br> 如果删除文件夹，需要加-r参数<br> 如： git rm —f -r “文件夹名”</li>
+</ol>
+<h3 id="克隆一个项目下来">克隆一个项目下来</h3><p>git clone git@github.com:username/Hello.git（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
+<h3 id="忽略文件-gitignore">忽略文件.gitignore</h3><ol>
+<li>进入要忽略的目录创建文件<br> touch  .gitignore     #创建gitignore隱藏文件</li>
+<li>vim .gitignore     #编辑文件，加入指定文件 </li>
+<li>git add . #就可以自动忽略掉指定的文件</li>
+<li>文件.gitignore的格式规范：<br>A：#为注释<br>B：可以使用shell所使用的正则表达式来进行模式匹配<br>C：匹配模式最后跟”/“说明要忽略的是目录<br>D：使用！取反（例如目录中包含  test.a，并且gitignore文件中包含  <em>.[oa]，如果在文件中加入 ！test.a   表明忽略除test.a文件以外的后缀名为.a或者.o的文件）<br>tmp.txt         //忽略tmp.txt
+</em>.log           //忽略所有log文件<br>tmp/<em>           //忽略tmp文件夹所有文件<br>log/**/</em>.log    //忽略log目录下的包括子目录下的所有log文件<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下面是我的gitignore文件的内容 </span></span><br><span class="line"><span class="comment">#忽略gitignore文件 </span></span><br><span class="line">.gitignore</span><br><span class="line"><span class="comment">#忽略后缀名为.o和.a的文件 </span></span><br><span class="line"><span class="keyword">*</span>.[oa]</span><br><span class="line"><span class="comment">#忽略后缀名为.exe和.txt的文件 </span></span><br><span class="line"><span class="keyword">*</span>.exe</span><br><span class="line"><span class="keyword">*</span>.txt</span><br><span class="line"><span class="comment">#显示指定忽略名称为main的文件 </span></span><br><span class="line">main</span><br><span class="line"></span><br><span class="line"><span class="comment"># eg:c++ .gitignore</span></span><br><span class="line"><span class="keyword">*</span>.sdf</span><br><span class="line">.gitignore</span><br><span class="line">Debug/<span class="keyword">*</span></span><br><span class="line">Release/<span class="keyword">*</span></span><br><span class="line">ipch/<span class="keyword">*</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="更新远程仓库代码到本地">更新远程仓库代码到本地</h3><ol>
+<li>查看远程仓库<br> git remote -v</li>
+<li>从远程获取最新版本到本地<br> git fetch origin master</li>
+<li>比较本地的仓库和远程参考的区别 （作参考，可不用执行该步）<br> git log -p master..  origin/master</li>
+<li>远程代码下载下来合并到本地仓库<br> git merge origin/master</li>
+<li>git add –p (patch模式)<br> eg: 修改了a,b,c文件<br> git add -p    //列出所有更改<br> y/a 应用<br> git commit -m “..”<br> …</li>
+</ol>
+<h3 id="关于可能出现的错误">关于可能出现的错误</h3><ol>
+<li><p>在执行<br> $ git remote addorigin git@github.com:defnngj/hello-world.git<br> 错误提示：fatal: remote origin already exists.<br> 解决办法：<br> $ git remote rm origin<br> 然后在执行：$ git remote add origin git@github.com:defnngj/hello-world.git 就不会报错误了</p>
+</li>
+<li><p>在执行<br> $ git push origin master<br> 错误提示：error:failed to push som refs to…….<br> 解决办法：<br> $ git pull origin master // 先把远程服务器github上面的文件拉下来，再push 上去。</p>
+</li>
+<li><p>遇到的问题:<br> update were rejected because the tip of your current branch is behind ….<br> 原因是远程的的代码库比我本地的代码库要新。<br> 所以需要在远程代码库pull一次下来。<br> 再修改代码。再push。</p>
+</li>
+<li><p>遇到遇到的问题:<br> change not staged for commit 通过add 和 checkout解决不了<br> git rm —cached <file> (git rm —cached test)<br> git add file (git add test/)</file></p>
+</li>
+</ol>
+<h3 id="git命令速查表">git命令速查表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-4.png" alt="tool-editor"></p>
+<h3 id="git详细命令表">git详细命令表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-5.png" alt="tool-editor"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>windows下git使用总结]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://yoursite.com/2015/05/07/hello-world/"/>
-    <id>http://yoursite.com/2015/05/07/hello-world/</id>
-    <published>2015-05-07T06:31:26.521Z</published>
+    <link href="http://yoursite.com/2015/05/08/hello-world/"/>
+    <id>http://yoursite.com/2015/05/08/hello-world/</id>
+    <published>2015-05-08T02:52:52.829Z</published>
     <updated>2015-05-07T06:31:26.521Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
