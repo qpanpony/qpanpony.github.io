@@ -198,7 +198,7 @@ Enter <span class="built_in">file</span> <span class="operator">in</span> which 
 <p> 4.3 输入github密码</p>
 <pre><code>Enter passphrase (<span class="keyword">empty</span> <span class="keyword">for</span> no passphrase): [<span class="keyword">Type</span> a passphrase]
 Enter same passphrase again: [<span class="keyword">Type</span> passphrase again]
-</code></pre><p> 这个时候输入你在github密码。<br> 然后在.ssh中可以看到</p>
+</code></pre><p> 这个时候输入你在github密码，然后在.ssh中可以看到</p>
 <pre><code>Your identification has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.
 # Your <span class="keyword">public</span> key has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.pub.
 </code></pre><p> 4.4 添加SSH公钥到github<br> 打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。</p>
@@ -214,7 +214,9 @@ Are you sure you want <span class="keyword">to</span> <span class="keyword">cont
 </li>
 <li><p>使用git commit -m “first commit” 进行提交（”first commit” 相当于一个描述）</p>
 </li>
-<li><p>使用远程连接：<br> git remote add origin git@github.com:username/SmartScript.git<br>（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
+<li><p>使用远程连接：</p>
+<pre><code>git remote add origin git@github<span class="class">.com</span>:username/SmartScript<span class="class">.git</span> 
+</code></pre><p>（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
 </li>
 <li><p>输入命令“git push origin master”将源码推送到GitHub</p>
 </li>
@@ -226,7 +228,7 @@ Are you sure you want <span class="keyword">to</span> <span class="keyword">cont
 <li>git rm —cached ”del.txt”</li>
 <li>git commit -m “del”</li>
 <li>git push origin master (失败先 git pull)<br><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-2.png" alt="tool-editor"></li>
-<li>另外<br> 使用 git rm 命令即可，有两种选择,<br> 一种是 git rm —cached “文件路径”，不删除物理文件，仅将该文件从缓存中删除；<br> 一种是 git rm —f “文件路径”，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。<br> 如果删除文件夹，需要加-r参数<br> 如： git rm —f -r “文件夹名”</li>
+<li>另外，使用 git rm 命令即可，有两种选择,<br> 一种是 git rm —cached “文件路径”，不删除物理文件，仅将该文件从缓存中删除；<br> 一种是 git rm —f “文件路径”，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。<br> 如果删除文件夹，需要加-r参数<br> 如： git rm —f -r “文件夹名”</li>
 </ol>
 <h3 id="克隆一个项目下来">克隆一个项目下来</h3><pre><code>git clone git<span class="annotation">@github</span>.<span class="string">com:</span>username/Hello.git
 </code></pre><p>（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
@@ -246,14 +248,23 @@ Are you sure you want <span class="keyword">to</span> <span class="keyword">cont
 <li>git add –p (patch模式)<br> eg: 修改了a,b,c文件<br> git add -p    //列出所有更改<br> y/a 应用<br> git commit -m “..”<br> …</li>
 </ol>
 <h3 id="关于可能出现的错误">关于可能出现的错误</h3><ol>
-<li><p>在执行<br> $ git remote addorigin git@github.com:defnngj/hello-world.git<br> 错误提示：fatal: remote origin already exists.<br> 解决办法：<br> $ git remote rm origin<br> 然后在执行：$ git remote add origin git@github.com:defnngj/hello-world.git 就不会报错误了</p>
+<li><p>在执行</p>
+<pre><code><span class="variable">$ </span>git remote addorigin git<span class="variable">@github</span>.<span class="symbol">com:</span>defnngj/hello-world.git
+</code></pre><p> 错误提示：fatal: remote origin already exists.<br> 解决办法：</p>
+<pre><code><span class="variable">$ </span>git remote rm origin
+</code></pre><p> 然后在执行：$ git remote add origin git@github.com:defnngj/hello-world.git 就不会报错误了</p>
 </li>
-<li><p>在执行<br> $ git push origin master<br> 错误提示：error:failed to push som refs to…….<br> 解决办法：<br> $ git pull origin master // 先把远程服务器github上面的文件拉下来，再push 上去。</p>
-</li>
+<li><p>在执行</p>
+<pre><code>$ git <span class="keyword">push</span> origin master
+</code></pre><p> 错误提示：error:failed to push som refs to…….<br> 解决办法：</p>
+<pre><code>$ git pull origin master <span class="comment">// 先把远程服务器github上面的文件拉下来，再push 上去。</span>
+</code></pre></li>
 <li><p>遇到的问题:<br> update were rejected because the tip of your current branch is behind ….<br> 原因是远程的的代码库比我本地的代码库要新。<br> 所以需要在远程代码库pull一次下来。<br> 再修改代码。再push。</p>
 </li>
-<li><p>遇到遇到的问题:<br> change not staged for commit 通过add 和 checkout解决不了<br> git rm —cached <file> (git rm —cached test)<br> git add file (git add test/)</file></p>
-</li>
+<li><p>遇到遇到的问题:<br> change not staged for commit<br> 通过add 和 checkout解决不了</p>
+<pre><code>git <span class="keyword">rm</span> --cached &lt;<span class="keyword">file</span>&gt; (git <span class="keyword">rm</span> --cached <span class="keyword">test</span>)
+git add <span class="keyword">file</span> (git add <span class="keyword">test</span>/)
+</code></pre></li>
 </ol>
 <h3 id="git命令速查表">git命令速查表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-4.png" alt="tool-editor"></p>
 <h3 id="git详细命令表">git详细命令表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-5.png" alt="tool-editor"></p>
@@ -274,11 +285,11 @@ Are you sure you want <span class="keyword">to</span> <span class="keyword">cont
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/08/hello-world/">Hexo Hello World</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/05/08/hello-world/">Hexo Hello World</a>
             
           </div>
         </div>
@@ -345,7 +356,7 @@ Are you sure you want <span class="keyword">to</span> <span class="keyword">cont
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
