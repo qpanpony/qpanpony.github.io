@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-08T09:29:51.000Z</updated>
+  <updated>2015-05-08T09:33:01.599Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,12 +15,12 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Markdownʹ��С��]]></title>
+    <title><![CDATA[Markdown使用小结]]></title>
     <link href="http://yoursite.com/2015/05/08/Markdown-Style-Guide/"/>
     <id>http://yoursite.com/2015/05/08/Markdown-Style-Guide/</id>
-    <published>2015-05-08T09:29:51.000Z</published>
-    <updated>2015-05-08T09:29:51.000Z</updated>
-    <content type="html"><![CDATA[<p>��������ƪ�����У��������й�Markdown��ʹ��С��<a id="more"></a></p>
+    <published>2015-05-08T09:33:01.599Z</published>
+    <updated>2015-05-08T09:33:01.599Z</updated>
+    <content type="html"><![CDATA[<p>从以下两篇文章中，整合了有关Markdown的使用小结<br><a id="more"></a></p>
 <ol>
 <li>This is a demo of all styled elements in Jekyll Now.</li>
 </ol>
@@ -65,7 +65,7 @@
 <p>Syntax highlighting can be used with triple backticks, like so:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Some pointless Javascript */</span></span><br><span class="line"><span class="keyword">var</span> rawr = [<span class="string">"r"</span>, <span class="string">"a"</span>, <span class="string">"w"</span>, <span class="string">"r"</span>];</span><br></pre></td></tr></table></figure>
 <p>Use two trailing spaces<br>on the right<br>to create linebreak tags  </p>
-<p>Github supports many extras in Markdown that help you reference and link to people.<br>If you ever want to direct a comment at someone,<br>you can prefix their name with an @ symbol: Hey @kneath �� love your sweater!</p>
+<p>Github supports many extras in Markdown that help you reference and link to people.<br>If you ever want to direct a comment at someone,<br>you can prefix their name with an @ symbol: Hey @kneath — love your sweater!</p>
 <p>But I have to admit, tasks lists are my favorite:</p>
 <ul>
 <li>[x] This is a complete item</li>
@@ -77,13 +77,13 @@
 <hr>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>��������ƪ�����У��������й�Markdown��ʹ��С��]]>
+    <![CDATA[<p>从以下两篇文章中，整合了有关Markdown的使用小结<br>]]>
     
     </summary>
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
-      <category term="�����ο�" scheme="http://yoursite.com/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CE%BF%EF%BF%BD/"/>
+      <category term="技术参考" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
     
   </entry>
   
@@ -91,9 +91,9 @@
     <title><![CDATA[git使用总结（转发自idhyt's blog）]]></title>
     <link href="http://yoursite.com/2015/05/08/git-conclusion/"/>
     <id>http://yoursite.com/2015/05/08/git-conclusion/</id>
-    <published>2015-05-08T04:40:15.573Z</published>
-    <updated>2015-05-08T04:40:15.573Z</updated>
-    <content type="html"><![CDATA[<p>windows下git使用总结<a id="more"></a></p>
+    <published>2015-05-08T09:32:48.754Z</published>
+    <updated>2015-05-08T09:32:48.754Z</updated>
+    <content type="html"><![CDATA[<p>windows下git使用总结<br><a id="more"></a></p>
 <h3 id="初始化配置Github">初始化配置Github</h3><ol>
 <li><p>下载msysgit并安装 : <a href="http://msysgit.github.io/" target="_blank" rel="external">http://msysgit.github.io/</a></p>
 </li>
@@ -189,7 +189,7 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
 <h3 id="git详细命令表">git详细命令表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-5.png" alt="tool-editor"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>windows下git使用总结]]>
+    <![CDATA[<p>windows下git使用总结<br>]]>
     
     </summary>
     
@@ -203,9 +203,9 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
     <title><![CDATA[Hexo Hello World]]></title>
     <link href="http://yoursite.com/2015/05/08/hello-world/"/>
     <id>http://yoursite.com/2015/05/08/hello-world/</id>
-    <published>2015-05-08T04:28:48.549Z</published>
-    <updated>2015-05-08T04:28:48.549Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <published>2015-05-08T09:32:20.154Z</published>
+    <updated>2015-05-08T09:32:20.154Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<a id="more"></a></p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -216,7 +216,8 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.]]>
+    
     </summary>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
