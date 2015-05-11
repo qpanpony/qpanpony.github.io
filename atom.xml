@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-05-08T14:11:57.834Z</updated>
+  <updated>2015-05-11T02:45:53.416Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -18,15 +18,15 @@
     <title><![CDATA[Markdown使用小结]]></title>
     <link href="http://qpanpony.github.io/2015/05/08/Markdown-Style-Guide/"/>
     <id>http://qpanpony.github.io/2015/05/08/Markdown-Style-Guide/</id>
-    <published>2015-05-08T14:11:57.834Z</published>
-    <updated>2015-05-08T14:11:57.834Z</updated>
+    <published>2015-05-07T16:00:00.000Z</published>
+    <updated>2015-05-11T02:45:53.416Z</updated>
     <content type="html"><![CDATA[<p>转发一篇有关Markdown的使用小结。<br><a id="more"></a></p>
 <p>This is a demo of all styled elements in Jekyll Now.<a href="https://raw.githubusercontent.com/barryclark/www.jekyllnow.com/gh-pages/_posts/2014-6-19-Markdown-Style-Guide.md" target="_blank" rel="external">View the markdown used to create this post</a>.</p>
 <p>Mastering Markdown.<a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="external">Mastering Markdown</a>.</p>
 <p>This is a paragraph, it’s surrounded by whitespace. Next up are some headers, they’re heavily influenced by GitHub’s markdown style.</p>
 <h2 id="Header_2_(H1_is_reserved_for_post_titles)">Header 2 (H1 is reserved for post titles)</h2><h3 id="Header_3">Header 3</h3><h4 id="Header_4">Header 4</h4><p>A link to <a href="http://github.com/barryclark/jekyll-now/" target="_blank" rel="external">Jekyll Now</a>. A big ass literal link <a href="http://github.com/barryclark/jekyll-now/" target="_blank" rel="external">http://github.com/barryclark/jekyll-now/</a></p>
 <p>An image, located within /images</p>
-<p><img src="/images/bkdefault_avatar.png" alt="an image alt text" title="an image title"></p>
+<p><img src="!--￼1--&gt;/images/bkdefault_avatar.png" alt="an image alt text" title="an image title"></p>
 <ul>
 <li>A bulletted list</li>
 </ul>
@@ -76,10 +76,10 @@
   
   <entry>
     <title><![CDATA[git使用总结（转发自idhyt's blog）]]></title>
-    <link href="http://qpanpony.github.io/2015/05/08/git-conclusion/"/>
-    <id>http://qpanpony.github.io/2015/05/08/git-conclusion/</id>
-    <published>2015-05-08T09:32:48.754Z</published>
-    <updated>2015-05-08T09:32:48.754Z</updated>
+    <link href="http://qpanpony.github.io/2015/05/06/git-conclusion/"/>
+    <id>http://qpanpony.github.io/2015/05/06/git-conclusion/</id>
+    <published>2015-05-05T16:00:00.000Z</published>
+    <updated>2015-05-11T02:44:06.166Z</updated>
     <content type="html"><![CDATA[<p>windows下git使用总结<br><a id="more"></a></p>
 <h3 id="初始化配置Github">初始化配置Github</h3><ol>
 <li><p>下载msysgit并安装 : <a href="http://msysgit.github.io/" target="_blank" rel="external">http://msysgit.github.io/</a></p>
@@ -188,10 +188,10 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
   
   <entry>
     <title><![CDATA[Hexo Hello World]]></title>
-    <link href="http://qpanpony.github.io/2015/05/08/hello-world/"/>
-    <id>http://qpanpony.github.io/2015/05/08/hello-world/</id>
-    <published>2015-05-08T09:32:20.154Z</published>
-    <updated>2015-05-08T09:32:20.154Z</updated>
+    <link href="http://qpanpony.github.io/2015/05/04/hello-world/"/>
+    <id>http://qpanpony.github.io/2015/05/04/hello-world/</id>
+    <published>2015-05-03T16:00:00.000Z</published>
+    <updated>2015-05-11T02:43:41.348Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<a id="more"></a></p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
