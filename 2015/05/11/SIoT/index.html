@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="SIoT," />
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <title> git使用总结（转发自idhyt's blog） // Pony的博客 </title>
+  <title> 谈谈SIoT: Social Internet of Things // Pony的博客 </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              git使用总结（转发自idhyt's blog）
+              谈谈SIoT: Social Internet of Things
             
           
         </h1>
@@ -146,14 +146,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-05
+          发表于 2015-05-11
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="../../../../categories/技术参考/">技术参考</a>
+              <a href="../../../../categories/闭眼瞎评/">闭眼瞎评</a>
 
               
               
@@ -174,100 +174,16 @@
       
 
       
-        <p>windows下git使用总结<br><a id="more"></a></p>
-<h3 id="初始化配置Github">初始化配置Github</h3><ol>
-<li><p>下载msysgit并安装 : <a href="http://msysgit.github.io/" target="_blank" rel="external">http://msysgit.github.io/</a></p>
-</li>
-<li><p>github上创建一个项目，如SmartScript</p>
-</li>
-<li><p>初始化<br> 新建Github目录并进入：</p>
-<pre><code><span class="keyword">cd</span> <span class="keyword">d</span>:\\work\\Github
-git init
-git config --<span class="keyword">global</span> user.name <span class="string">"usernme"</span> 
-git config --<span class="keyword">global</span> user.email  <span class="string">"emailName"</span>
-</code></pre><p> （username：GitHub的用户名）（emailName：GitHub的注册邮箱）</p>
-</li>
-<li><p>安装ssh<br> 4.1 检查SSH公钥 : </p>
-<pre><code><span class="built_in">cd</span> ~/.ssh
-</code></pre><p> 看看存不存在.ssh</p>
-<p> 4.2 生成SSH公钥 : </p>
-<pre><code>ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span>
-<span class="comment"># Creates a new ssh key using the provided email Generating public/private rsa key pair.</span>
-Enter <span class="built_in">file</span> <span class="operator">in</span> which <span class="built_in">to</span> save <span class="operator">the</span> key (/user/you/.ssh/id_rsa):
-</code></pre><p> 现在你可以看到，在自己的目录下，有一个.ssh目录，说明成功了</p>
-<p> 4.3 输入github密码</p>
-<pre><code>Enter passphrase (<span class="keyword">empty</span> <span class="keyword">for</span> no passphrase): [<span class="keyword">Type</span> a passphrase]
-Enter same passphrase again: [<span class="keyword">Type</span> passphrase again]
-</code></pre><p> 这个时候输入你在github密码，然后在.ssh中可以看到</p>
-<pre><code>Your identification has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.
-# Your <span class="keyword">public</span> key has been saved <span class="keyword">in</span> <span class="regexp">/home/</span>you<span class="regexp">/.ssh/</span>id_rsa.pub.
-</code></pre><p> 4.4 添加SSH公钥到github<br> 打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。</p>
-<p> 4.5 测试是否生效<br> 使用命令： </p>
-<pre><code><span class="title">ssh</span> -T git<span class="variable">@github</span>.com
-</code></pre><p> 当你看到这些内容放入时候，直接yes</p>
-<pre><code>The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span>
-RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span>
-Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?
-</code></pre><p> 看到这个内容放入时候，说明就成功了。<br> <img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-1.png" alt="tool-editor"></p>
-</li>
-<li><p>使用git add filename 将项目文件添加到库（如 git add “readme.txt”），也可以多文件夹设置，如在Github目录下创建文件夹Python并拷贝项目到该目录，然后CD 进入执行命令</p>
-</li>
-<li><p>使用git commit -m “first commit” 进行提交（”first commit” 相当于一个描述）</p>
-</li>
-<li><p>使用远程连接：</p>
-<pre><code>git remote add origin git@github<span class="class">.com</span>:username/SmartScript<span class="class">.git</span> 
-</code></pre><p>（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
-</li>
-<li><p>输入命令“git push origin master”将源码推送到GitHub</p>
-</li>
-<li><p>在GitHub上仓库页面刷新即可看到你在本地创建并提交的文件</p>
-</li>
-</ol>
-<h3 id="删除Github上的文件(如_del-txt)">删除Github上的文件(如 del.txt)</h3><ol>
-<li>进入到对应的目录下 cd: D:\work\Github\SmartScript</li>
-<li>git rm —cached ”del.txt”</li>
-<li>git commit -m “del”</li>
-<li>git push origin master (失败先 git pull)<br><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-2.png" alt="tool-editor"></li>
-<li>另外，使用 git rm 命令即可，有两种选择,<br> 一种是 git rm —cached “文件路径”，不删除物理文件，仅将该文件从缓存中删除；<br> 一种是 git rm —f “文件路径”，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）。<br> 如果删除文件夹，需要加-r参数<br> 如： git rm —f -r “文件夹名”</li>
-</ol>
-<h3 id="克隆一个项目下来">克隆一个项目下来</h3><pre><code>git clone git<span class="annotation">@github</span>.<span class="string">com:</span>username/Hello.git
-</code></pre><p>（username：GitHub上的用户名，SmartScript：我在GitHub上创建的仓库repository名）</p>
-<h3 id="忽略文件-gitignore">忽略文件.gitignore</h3><ol>
-<li>进入要忽略的目录创建文件<br>touch  .gitignore     #创建gitignore隱藏文件</li>
-<li>vim .gitignore     #编辑文件，加入指定文件 </li>
-<li>git add . #就可以自动忽略掉指定的文件</li>
-<li>文件.gitignore的格式规范：<br>A：#为注释<br>B：可以使用shell所使用的正则表达式来进行模式匹配<br>C：匹配模式最后跟”/“说明要忽略的是目录<br>D：使用！取反（例如目录中包含  test.a，并且gitignore文件中包含  <em>.[oa]，如果在文件中加入 ！test.a   表明忽略除test.a文件以外的后缀名为.a或者.o的文件）<br>tmp.txt         //忽略tmp.txt
-</em>.log           //忽略所有log文件<br>tmp/<em>           //忽略tmp文件夹所有文件<br>log/**/</em>.log    //忽略log目录下的包括子目录下的所有log文件<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下面是我的gitignore文件的内容 </span></span><br><span class="line"><span class="comment">#忽略gitignore文件 </span></span><br><span class="line">.gitignore</span><br><span class="line"><span class="comment">#忽略后缀名为.o和.a的文件 </span></span><br><span class="line"><span class="keyword">*</span>.[oa]</span><br><span class="line"><span class="comment">#忽略后缀名为.exe和.txt的文件 </span></span><br><span class="line"><span class="keyword">*</span>.exe</span><br><span class="line"><span class="keyword">*</span>.txt</span><br><span class="line"><span class="comment">#显示指定忽略名称为main的文件 </span></span><br><span class="line">main</span><br><span class="line"></span><br><span class="line"><span class="comment"># eg:c++ .gitignore</span></span><br><span class="line"><span class="keyword">*</span>.sdf</span><br><span class="line">.gitignore</span><br><span class="line">Debug/<span class="keyword">*</span></span><br><span class="line">Release/<span class="keyword">*</span></span><br><span class="line">ipch/<span class="keyword">*</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="更新远程仓库代码到本地">更新远程仓库代码到本地</h3><ol>
-<li>查看远程仓库<br> git remote -v</li>
-<li>从远程获取最新版本到本地<br> git fetch origin master</li>
-<li>比较本地的仓库和远程参考的区别 （作参考，可不用执行该步）<br> git log -p master..  origin/master</li>
-<li>远程代码下载下来合并到本地仓库<br> git merge origin/master</li>
-<li>git add –p (patch模式)<br> eg: 修改了a,b,c文件<br> git add -p    //列出所有更改<br> y/a 应用<br> git commit -m “..”<br> …</li>
-</ol>
-<h3 id="关于可能出现的错误">关于可能出现的错误</h3><ol>
-<li><p>在执行</p>
-<pre><code><span class="variable">$ </span>git remote addorigin git<span class="variable">@github</span>.<span class="symbol">com:</span>defnngj/hello-world.git
-</code></pre><p> 错误提示：fatal: remote origin already exists.<br> 解决办法：</p>
-<pre><code><span class="variable">$ </span>git remote rm origin
-</code></pre><p> 然后在执行：$ git remote add origin git@github.com:defnngj/hello-world.git 就不会报错误了</p>
-</li>
-<li><p>在执行</p>
-<pre><code>$ git <span class="keyword">push</span> origin master
-</code></pre><p> 错误提示：error:failed to push som refs to…….<br> 解决办法：</p>
-<pre><code>$ git pull origin master <span class="comment">// 先把远程服务器github上面的文件拉下来，再push 上去。</span>
-</code></pre></li>
-<li><p>遇到的问题:<br> update were rejected because the tip of your current branch is behind ….<br> 原因是远程的的代码库比我本地的代码库要新。<br> 所以需要在远程代码库pull一次下来。<br> 再修改代码。再push。</p>
-</li>
-<li><p>遇到遇到的问题:<br> change not staged for commit<br> 通过add 和 checkout解决不了</p>
-<pre><code>git <span class="keyword">rm</span> --cached &lt;<span class="keyword">file</span>&gt; (git <span class="keyword">rm</span> --cached <span class="keyword">test</span>)
-git add <span class="keyword">file</span> (git add <span class="keyword">test</span>/)
-</code></pre></li>
-</ol>
-<h3 id="git命令速查表">git命令速查表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-4.png" alt="tool-editor"></p>
-<h3 id="git详细命令表">git详细命令表</h3><p><img src="http://7xi9s3.com1.z0.glb.clouddn.com/git-conclusion-5.png" alt="tool-editor"></p>
+        <p>Social IoT: Social Internet of Things这个词，我能查到的，应该是Luigi Atzori等人在IEEE Communications Letters发表的名为“SIoT：Giving a social structure to the internet of things, 2011”的论文中正式出现的。此后，University of Cagliari的这个研究组陆续在Computer Networks(The Social Internet of things (SIoT)-when social networks meet the internet of things: Concept, architecture and network characterization, 2012)、IEEE Communication Magazine (From “smart Objects” to “social objects”: The next evolutionary step of the internet of thngs, 2014)发表多篇有关SIoT的论文。从字面上理解，SIoT就是要探讨将社会关系网络纳入物联网的技术潜力，中文上，我觉得社会物联网络是一个合适的。</p>
+<p>好吧，人类有哪些基本关系类型？Fiske在综合人类学、社会心理学和社会学的研究及理论基础上，提出了目前被广泛接受的4种人类基本关系类型，即：<br><em>公共共享(Communal sharing)
+</em>等级排序(Authority ranking)<br><em>平等匹配(Equality matching)
+</em>市场定价(Market pricing)<br>不明白？确实，现在把人类的这些基本关系类型直接引入到物物对象之间是还有些远。</p>
+<p>那说说Luigiz Atzori定义的相对具体的对象间关系类型：<br><em>POR: Parental object relationship
+</em>C-LOR:Co-location object relationship<br><em>C-WOR: Co-work object relationship
+</em>OOR: Ownership object relationship<br>*SOR: Social object relationship</p>
+<p>有关对象间关系类型，之前（好吧，其实是一年半前…）我琢磨过一段时间，把它进行重新整理成以下社会物联网络群组关系类型：<br><em>本征关系<br>    -基于生产制造者的关系(PR: Parental Relationship)<br>    -基于所有者的关系(OR: Ownership Relationship)
+</em>非本征关系<br>    -基于动态物理位置的关系(LR: Location Relationship)<br>    -基于任务的关系(TR: Task Relationship)<br>    -基于事件的关系(ER: Event Relationship)<br>    -基于特征指标的关系(MR: Metrics Relationship)<br>    -基于用户/服务对象的关系(UR: User Relationship)</p>
+<p>顺便吐槽一下，一年半前，本来是想在此基础上整理一份有关社会物联网络关系群组建立方法的专利，可惜公司内部评审的专家给了差评，好吧，you can you up, no can no BB!</p>
 
       
     </div>
@@ -276,7 +192,7 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
       
         <div class="post-tags">
           
-            <a href="../../../../tags/git/"> #git </a>
+            <a href="../../../../tags/SIoT/"> #SIoT </a>
           
         </div>
       
@@ -285,13 +201,11 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="../../08/Markdown-Style-Guide/">Markdown使用小结</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../04/hello-world/">Hexo Hello World</a>
+              <a href="../../08/Markdown-Style-Guide/">Markdown使用小结</a>
             
           </div>
         </div>
@@ -408,7 +322,7 @@ git add <span class="keyword">file</span> (git add <span class="keyword">test</s
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化配置Github"><span class="nav-number">1.</span> <span class="nav-text">初始化配置Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除Github上的文件(如_del-txt)"><span class="nav-number">2.</span> <span class="nav-text">删除Github上的文件(如 del.txt)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆一个项目下来"><span class="nav-number">3.</span> <span class="nav-text">克隆一个项目下来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略文件-gitignore"><span class="nav-number">4.</span> <span class="nav-text">忽略文件.gitignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新远程仓库代码到本地"><span class="nav-number">5.</span> <span class="nav-text">更新远程仓库代码到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于可能出现的错误"><span class="nav-number">6.</span> <span class="nav-text">关于可能出现的错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git命令速查表"><span class="nav-number">7.</span> <span class="nav-text">git命令速查表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git详细命令表"><span class="nav-number">8.</span> <span class="nav-text">git详细命令表</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

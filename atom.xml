@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-05-11T05:55:05.125Z</updated>
+  <updated>2015-05-11T08:10:48.570Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -15,18 +15,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[谈谈SIoT: Social Internet of Things]]></title>
+    <link href="http://qpanpony.github.io/2015/05/11/SIoT/"/>
+    <id>http://qpanpony.github.io/2015/05/11/SIoT/</id>
+    <published>2015-05-11T05:58:31.000Z</published>
+    <updated>2015-05-11T08:10:48.570Z</updated>
+    <content type="html"><![CDATA[<p>Social IoT: Social Internet of Things这个词，我能查到的，应该是Luigi Atzori等人在IEEE Communications Letters发表的名为“SIoT：Giving a social structure to the internet of things, 2011”的论文中正式出现的。此后，University of Cagliari的这个研究组陆续在Computer Networks(The Social Internet of things (SIoT)-when social networks meet the internet of things: Concept, architecture and network characterization, 2012)、IEEE Communication Magazine (From “smart Objects” to “social objects”: The next evolutionary step of the internet of thngs, 2014)发表多篇有关SIoT的论文。从字面上理解，SIoT就是要探讨将社会关系网络纳入物联网的技术潜力，中文上，我觉得社会物联网络是一个合适的。</p>
+<p>好吧，人类有哪些基本关系类型？Fiske在综合人类学、社会心理学和社会学的研究及理论基础上，提出了目前被广泛接受的4种人类基本关系类型，即：<br><em>公共共享(Communal sharing)
+</em>等级排序(Authority ranking)<br><em>平等匹配(Equality matching)
+</em>市场定价(Market pricing)<br>不明白？确实，现在把人类的这些基本关系类型直接引入到物物对象之间是还有些远。</p>
+<p>那说说Luigiz Atzori定义的相对具体的对象间关系类型：<br><em>POR: Parental object relationship
+</em>C-LOR:Co-location object relationship<br><em>C-WOR: Co-work object relationship
+</em>OOR: Ownership object relationship<br>*SOR: Social object relationship</p>
+<p>有关对象间关系类型，之前（好吧，其实是一年半前…）我琢磨过一段时间，把它进行重新整理成以下社会物联网络群组关系类型：<br><em>本征关系<br>    -基于生产制造者的关系(PR: Parental Relationship)<br>    -基于所有者的关系(OR: Ownership Relationship)
+</em>非本征关系<br>    -基于动态物理位置的关系(LR: Location Relationship)<br>    -基于任务的关系(TR: Task Relationship)<br>    -基于事件的关系(ER: Event Relationship)<br>    -基于特征指标的关系(MR: Metrics Relationship)<br>    -基于用户/服务对象的关系(UR: User Relationship)</p>
+<p>顺便吐槽一下，一年半前，本来是想在此基础上整理一份有关社会物联网络关系群组建立方法的专利，可惜公司内部评审的专家给了差评，好吧，you can you up, no can no BB!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Social IoT: Social Internet of Things这个词，我能查到的，应该是Luigi Atzori等人在IEEE Communications Letters发表的名为“SIoT：Giving a social structure to the i]]>
+    </summary>
+    
+      <category term="SIoT" scheme="http://qpanpony.github.io/tags/SIoT/"/>
+    
+      <category term="闭眼瞎评" scheme="http://qpanpony.github.io/categories/%E9%97%AD%E7%9C%BC%E7%9E%8E%E8%AF%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Markdown使用小结]]></title>
     <link href="http://qpanpony.github.io/2015/05/08/Markdown-Style-Guide/"/>
     <id>http://qpanpony.github.io/2015/05/08/Markdown-Style-Guide/</id>
     <published>2015-05-07T16:00:00.000Z</published>
-    <updated>2015-05-11T05:55:05.125Z</updated>
+    <updated>2015-05-11T06:07:23.019Z</updated>
     <content type="html"><![CDATA[<p>转发一篇有关Markdown的使用小结。<br><a id="more"></a></p>
 <p>This is a demo of all styled elements in Jekyll Now.<a href="https://raw.githubusercontent.com/barryclark/www.jekyllnow.com/gh-pages/_posts/2014-6-19-Markdown-Style-Guide.md" target="_blank" rel="external">View the markdown used to create this post</a>.</p>
 <p>Mastering Markdown.<a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="external">Mastering Markdown</a>.</p>
 <p>This is a paragraph, it’s surrounded by whitespace. Next up are some headers, they’re heavily influenced by GitHub’s markdown style.</p>
 <h2 id="Header_2_(H1_is_reserved_for_post_titles)">Header 2 (H1 is reserved for post titles)</h2><h3 id="Header_3">Header 3</h3><h4 id="Header_4">Header 4</h4><p>A link to <a href="http://github.com/barryclark/jekyll-now/" target="_blank" rel="external">Jekyll Now</a>. A big ass literal link <a href="http://github.com/barryclark/jekyll-now/" target="_blank" rel="external">http://github.com/barryclark/jekyll-now/</a></p>
 <p>An image, located within /images</p>
-<p><img src="http://qpanpony.github.io/images/bkdefault_avatar.png" alt="an image alt text" title="an image title"></p>
+<p><img src="http://qpanpony.github.io/images/bkdefault_avatar.jpg" alt="an image alt text" title="an image title"></p>
 <ul>
 <li>A bulletted list</li>
 </ul>
