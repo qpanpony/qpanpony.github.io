@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-05-12T02:43:11.377Z</updated>
+  <updated>2015-05-30T22:24:39.852Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Spark与Hadoop mapreduce比较（摘录）]]></title>
+    <link href="http://qpanpony.github.io/2015/05/31/Spark-Mapreduce/"/>
+    <id>http://qpanpony.github.io/2015/05/31/Spark-Mapreduce/</id>
+    <published>2015-05-30T16:00:00.000Z</published>
+    <updated>2015-05-30T22:24:39.852Z</updated>
+    <content type="html"><![CDATA[<p>摘录近期看到的有关spark与Hadoop mapreduce的比较，备忘~~ <a id="more"></a></p>
+<hr>
+<p>| Spark | Hadoop Mapreduce |<br>| 基于RDD的抽象，实数据处理逻辑的代码非常简短。 | 抽象层次低，需要手工编写代码来完成，使用上难以上手。|<br>| 提供很多转换和动作，很多基本操作如Join，GroupBy已经在RDD转换和动作中实现。 | 只提供两个操作，Map和Reduce，表达力欠缺。 |<br>| 一个Job可以包含RDD的多个转换操作，在调度时可以生成多个阶段（Stage），而且如果多个map操作的RDD的分区不变，是可以放在同一个Task中进行。| 一个Job只有Map和Reduce两个阶段（Phase），复杂的计算需要大量的Job完成，Job之间的依赖关系是由开发者自己管理的。|<br>| 在Scala中，通过匿名函数和高阶函数，RDD的转换支持流式API，可以提供处理逻辑的整体视图。代码不包含具体操作的实现细节，逻辑更清晰。 | 处理逻辑隐藏在代码细节中，没有整体逻辑。<br>| 中间结果放在内存中，内存放不下了会写入本地磁盘，而不是HDFS。 | 中间结果也放在HDFS文件系统中。 |<br>| 分区相同的转换构成流水线放在一个Task中运行，分区不同的转换需要Shuffle，被划分到不同的Stage中，需要等待前面的Stage完成后才可以开始。 | ReduceTask需要等待所有MapTask都完成后才可以开始。|<br>| 通过将流拆成小的batch提供Discretized Stream处理流数据。 | 时延高，只适用Batch数据处理，对于交互式数据处理，实时数据处理的支持不够。 |<br>| 通过在内存中缓存数据，提高迭代式计算的性能。 | 对于迭代式数据处理性能比较差。 |</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>摘录近期看到的有关spark与Hadoop mapreduce的比较，备忘~~]]>
+    
+    </summary>
+    
+      <category term="mapreduce" scheme="http://qpanpony.github.io/tags/mapreduce/"/>
+    
+      <category term="spark" scheme="http://qpanpony.github.io/tags/spark/"/>
+    
+      <category term="技术参考" scheme="http://qpanpony.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[欢迎使用 Cmd Markdown 编辑阅读器（转载）]]></title>
