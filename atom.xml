@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-05-30T22:30:31.489Z</updated>
+  <updated>2015-06-06T21:44:16.095Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://qpanpony.github.io/2015/05/31/Spark-Mapreduce/"/>
     <id>http://qpanpony.github.io/2015/05/31/Spark-Mapreduce/</id>
     <published>2015-05-30T16:00:00.000Z</published>
-    <updated>2015-05-30T22:30:31.489Z</updated>
-    <content type="html"><![CDATA[<p>摘录近期看到的有关spark与Hadoop mapreduce的比较，备忘~~ <a id="more"></a></p>
+    <updated>2015-06-06T21:44:16.095Z</updated>
+    <content type="html"><![CDATA[<p>摘录近期在<a href="http://www.zhihu.com/question/26568496/answer/41608400" target="_blank" rel="external">知乎</a>上看到的有关spark与Hadoop mapreduce的比较，备忘~~ <a id="more"></a></p>
 <hr>
 <table>
 <thead>
@@ -66,7 +66,7 @@
 </table>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>摘录近期看到的有关spark与Hadoop mapreduce的比较，备忘~~]]>
+    <![CDATA[<p>摘录近期在<a href="http://www.zhihu.com/question/26568496/answer/41608400">知乎</a>上看到的有关spark与Hadoop mapreduce的比较，备忘~~]]>
     
     </summary>
     
