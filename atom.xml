@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-06-09T02:48:13.368Z</updated>
+  <updated>2015-06-09T02:49:21.445Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://qpanpony.github.io/2015/06/09/hadoopEcosys/"/>
     <id>http://qpanpony.github.io/2015/06/09/hadoopEcosys/</id>
     <published>2015-06-09T02:25:52.000Z</published>
-    <updated>2015-06-09T02:48:13.368Z</updated>
-    <content type="html"><![CDATA[<p>Hadoop����̬ϵͳһ����<a id="more"></a></p>
+    <updated>2015-06-09T02:49:21.445Z</updated>
+    <content type="html"><![CDATA[<p>Hadoop的生态系统一览表。<a id="more"></a></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">����</th>
-<th style="text-align:left">ϵͳ</th>
+<th style="text-align:left">类别</th>
+<th style="text-align:left">系统</th>
 </tr>
 </thead>
 <tbody>
@@ -37,7 +37,7 @@
 </table>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Hadoop����̬ϵͳһ����]]>
+    <![CDATA[<p>Hadoop的生态系统一览表。]]>
     
     </summary>
     
@@ -45,7 +45,7 @@
     
       <category term="hadoop" scheme="http://qpanpony.github.io/tags/hadoop/"/>
     
-      <category term="�����ο�" scheme="http://qpanpony.github.io/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CE%BF%EF%BF%BD/"/>
+      <category term="技术参考" scheme="http://qpanpony.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
     
   </entry>
   
