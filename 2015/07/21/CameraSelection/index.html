@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="mapreduce,spark," />
+  <meta name="keywords" content="Camera,Sensing," />
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <title> Spark与Hadoop mapreduce比较（摘录） // Pony的博客 </title>
+  <title> CameraSelection // Pony的博客 </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              Spark与Hadoop mapreduce比较（摘录）
+              CameraSelection
             
           
         </h1>
@@ -146,7 +146,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-30
+          发表于 2015-07-21
         </span>
 
         
@@ -174,50 +174,35 @@
       
 
       
-        <p>摘录近期在<a href="http://www.zhihu.com/question/26568496/answer/41608400" target="_blank" rel="external">知乎</a>上看到的有关spark与Hadoop mapreduce的比较，备忘~~ <a id="more"></a></p>
-<hr>
-<table>
-<thead>
-<tr>
-<th>Spark</th>
-<th>Hadoop Mapreduce</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>基于RDD的抽象，实数据处理逻辑的代码非常简短。</td>
-<td>抽象层次低，需要手工编写代码来完成，使用上难以上手。</td>
-</tr>
-<tr>
-<td>提供很多转换和动作，很多基本操作如Join，GroupBy已经在RDD转换和动作中实现。</td>
-<td>只提供两个操作，Map和Reduce，表达力欠缺。</td>
-</tr>
-<tr>
-<td>一个Job可以包含RDD的多个转换操作，在调度时可以生成多个阶段（Stage），而且如果多个map操作的RDD的分区不变，是可以放在同一个Task中进行。</td>
-<td>一个Job只有Map和Reduce两个阶段（Phase），复杂的计算需要大量的Job完成，Job之间的依赖关系是由开发者自己管理的。</td>
-</tr>
-<tr>
-<td>在Scala中，通过匿名函数和高阶函数，RDD的转换支持流式API，可以提供处理逻辑的整体视图。代码不包含具体操作的实现细节，逻辑更清晰。</td>
-<td>处理逻辑隐藏在代码细节中，没有整体逻辑。</td>
-</tr>
-<tr>
-<td>中间结果放在内存中，内存放不下了会写入本地磁盘，而不是HDFS。</td>
-<td>中间结果也放在HDFS文件系统中。</td>
-</tr>
-<tr>
-<td>分区相同的转换构成流水线放在一个Task中运行，分区不同的转换需要Shuffle，被划分到不同的Stage中，需要等待前面的Stage完成后才可以开始。</td>
-<td>ReduceTask需要等待所有MapTask都完成后才可以开始。</td>
-</tr>
-<tr>
-<td>通过将流拆成小的batch提供Discretized Stream处理流数据。</td>
-<td>时延高，只适用Batch数据处理，对于交互式数据处理，实时数据处理的支持不够。</td>
-</tr>
-<tr>
-<td>通过在内存中缓存数据，提高迭代式计算的性能。</td>
-<td>对于迭代式数据处理性能比较差。</td>
-</tr>
-</tbody>
-</table>
+        <p>这些天在考虑一个前端图像采集系统的方案，涉及到相机和镜头的选型，一些步骤和参数计算整理如下。<a id="more"></a></p>
+<ol>
+<li>选择相机的类型：<blockquote>
+<ul>
+<li>CCD 或 CMOS</li>
+<li>面阵 或 线阵</li>
+</ul>
+</blockquote>
+</li>
+<li>选择图像分辨率和帧率；<blockquote>
+<ul>
+<li>图像分辨率举例：2456*2058</li>
+<li>帧率举例：15 fps</li>
+</ul>
+</blockquote>
+</li>
+<li>选择相机传感器尺寸：<blockquote>
+<ul>
+<li>面阵传感器尺寸举例：2/3”</li>
+<li>常用面阵传感器尺寸<br>| 参数 | 1英寸 | 2/3英寸 | 1/2英寸 | 1/3英寸 | 1/4英寸 |<br>| :—— | —— | —— | —— | —— | —— |<br>| 对角线 <br> (mm) | 16 | 11 | 8 | 6 | 4 |<br>| 福面尺寸 <br> (mm) | 12.8<em>9.6 | 8.8</em>6.6 | 6.4<em>4.8 | 4.8</em>3.6 | 3.6*2.7 |</li>
+</ul>
+</blockquote>
+</li>
+<li>选择镜头：<ul>
+<li>镜头焦距，与物距和放大倍率相关（计算公式见后）</li>
+</ul>
+</li>
+<li>计算系统放大倍率：<br>$$\beta = \frac{传感器尺寸最小边}{对应的拍摄区域尺寸最小边} $$</li>
+</ol>
 
       
     </div>
@@ -226,9 +211,9 @@
       
         <div class="post-tags">
           
-            <a href="../../../../tags/mapreduce/"> #mapreduce </a>
+            <a href="../../../../tags/Camera/"> #Camera </a>
           
-            <a href="../../../../tags/spark/"> #spark </a>
+            <a href="../../../../tags/Sensing/"> #Sensing </a>
           
         </div>
       
@@ -237,13 +222,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="../../../06/09/hadoopEcosys/">Hadoop的生态系统</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../12/CmdMarkdown/">欢迎使用 Cmd Markdown 编辑阅读器（转载）</a>
+              <a href="../../../06/09/hadoopEcosys/">Hadoop的生态系统</a>
             
           </div>
         </div>

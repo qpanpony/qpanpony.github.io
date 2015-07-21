@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-06-09T03:13:29.273Z</updated>
+  <updated>2015-07-21T02:31:00.400Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -13,6 +13,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CameraSelection]]></title>
+    <link href="http://qpanpony.github.io/2015/07/21/CameraSelection/"/>
+    <id>http://qpanpony.github.io/2015/07/21/CameraSelection/</id>
+    <published>2015-07-21T01:46:59.000Z</published>
+    <updated>2015-07-21T02:31:00.400Z</updated>
+    <content type="html"><![CDATA[<p>这些天在考虑一个前端图像采集系统的方案，涉及到相机和镜头的选型，一些步骤和参数计算整理如下。<a id="more"></a></p>
+<ol>
+<li>选择相机的类型：<blockquote>
+<ul>
+<li>CCD 或 CMOS</li>
+<li>面阵 或 线阵</li>
+</ul>
+</blockquote>
+</li>
+<li>选择图像分辨率和帧率；<blockquote>
+<ul>
+<li>图像分辨率举例：2456*2058</li>
+<li>帧率举例：15 fps</li>
+</ul>
+</blockquote>
+</li>
+<li>选择相机传感器尺寸：<blockquote>
+<ul>
+<li>面阵传感器尺寸举例：2/3”</li>
+<li>常用面阵传感器尺寸<br>| 参数 | 1英寸 | 2/3英寸 | 1/2英寸 | 1/3英寸 | 1/4英寸 |<br>| :—— | —— | —— | —— | —— | —— |<br>| 对角线 <br> (mm) | 16 | 11 | 8 | 6 | 4 |<br>| 福面尺寸 <br> (mm) | 12.8<em>9.6 | 8.8</em>6.6 | 6.4<em>4.8 | 4.8</em>3.6 | 3.6*2.7 |</li>
+</ul>
+</blockquote>
+</li>
+<li>选择镜头：<ul>
+<li>镜头焦距，与物距和放大倍率相关（计算公式见后）</li>
+</ul>
+</li>
+<li>计算系统放大倍率：<br>$$\beta = \frac{传感器尺寸最小边}{对应的拍摄区域尺寸最小边} $$</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这些天在考虑一个前端图像采集系统的方案，涉及到相机和镜头的选型，一些步骤和参数计算整理如下。]]>
+    
+    </summary>
+    
+      <category term="Camera" scheme="http://qpanpony.github.io/tags/Camera/"/>
+    
+      <category term="Sensing" scheme="http://qpanpony.github.io/tags/Sensing/"/>
+    
+      <category term="技术参考" scheme="http://qpanpony.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hadoop的生态系统]]></title>
