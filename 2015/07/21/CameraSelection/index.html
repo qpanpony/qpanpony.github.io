@@ -35,7 +35,7 @@
 
 
 
-  <title> CameraSelection // Pony的博客 </title>
+  <title> 相机的选择 // Pony的博客 </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              CameraSelection
+              相机的选择
             
           
         </h1>
@@ -185,7 +185,7 @@
 </li>
 <li>选择图像分辨率和帧率；<blockquote>
 <ul>
-<li>图像分辨率举例：2456 * 2058</li>
+<li>图像分辨率举例：2456 $\times$ 2058</li>
 <li>帧率举例：15 fps</li>
 </ul>
 </blockquote>
@@ -193,7 +193,7 @@
 <li>选择相机传感器尺寸和像素尺寸：<blockquote>
 <ul>
 <li>面阵传感器尺寸举例：2/3”</li>
-<li>像素尺寸举例：3.45 $\mu$ m</li>
+<li>像素尺寸举例：3.45 $\mu$m $\times$ 3.45 $\mu$m</li>
 <li>常用面阵传感器尺寸</li>
 </ul>
 </blockquote>
@@ -221,11 +221,11 @@
 </tr>
 <tr>
 <td style="text-align:left">幅面尺寸 <br> (mm)</td>
-<td>12.8 * 9.6</td>
-<td>8.8 * 6.6</td>
-<td>6.4 * 4.8</td>
-<td>4.8 * 3.6</td>
-<td>3.6 * 2.7</td>
+<td>12.8 $\times$ 9.6</td>
+<td>8.8 $\times$ 6.6</td>
+<td>6.4 $\times$ 4.8</td>
+<td>4.8 $\times$ 3.6</td>
+<td>3.6 $\times$ 2.7</td>
 </tr>
 </tbody>
 </table>
@@ -241,22 +241,30 @@
 <ul>
 <li>$$\beta = \frac{传感器尺寸最小边}{对应的拍摄区域尺寸最小边} $$</li>
 <li>举例：$$\beta = \frac{6.6 mm}{15 m} = 4.4 \times 10^{-4} $$</li>
+<li>根据图像分辨率和像素尺寸可计算出传感器实际像面尺寸（可能与手册给出的传感器尺寸不一致），如 2058 $\times$ 3.45 $\mu$m $\approx$ 7.1mm</li>
 </ul>
 </li>
 <li><p>计算可分辨的景物精度：</p>
 <ul>
-<li>$$\frac{传感器像素尺寸}{系统放大倍率}</li>
+<li>$$\frac{传感器像素尺寸}{系统放大倍率} $$</li>
 <li>举例： $$\frac{ 3.45 \times 10^{-6}}{\beta} = \frac{ 3.45 \times 10^{-6}}{4.4 \times 10^{-4}} \approx 0.78 \times 10^{-2}m $$</li>
 </ul>
 </li>
 <li><p>如给定焦距f = 8mm，可计算所需的物距是：</p>
 <ul>
-<li>$$L=f(1+\frac{1}{\beta})=8 \times 10^{-3} \times (1 + \frac{1}{4.4 \times 10^{-4}}) \approx 18.2m $$</li>
+<li>举例：$$L=f(1+\frac{1}{\beta})=8 \times 10^{-3} \times (1 + \frac{1}{4.4 \times 10^{-4}}) \approx 18.2m $$</li>
 </ul>
 </li>
-<li><p>如给定物距15m，可计算所需的焦距是：</p>
+<li><p>如给定物距L = 15m，可计算所需的焦距是：</p>
 <ul>
-<li>$$ f = \frac{L}{1+\frac{1}{\beta}}=\frac{15 \times 10^{3}}{1+\frac{1}{4.4 \times 10^{-4}}} = 6.6 mm $$</li>
+<li>举例：$$ f = \frac{L}{1+\frac{1}{\beta}}=\frac{15 \times 10^{3}}{1+\frac{1}{4.4 \times 10^{-4}}} = 6.6 mm $$</li>
+</ul>
+</li>
+<li><p>计算相机的景深：</p>
+<ul>
+<li>后景深度或远景深度为：$$\Delta_{1} = \frac{F L^{2} \delta}{f^{2}-F L \delta} $$</li>
+<li>前景深度或近景深度为：$$\Delta_{2} = \frac{F L^{2} \delta}{f^{2}+F L \delta} $$</li>
+<li>其中，F为镜头拍摄的光圈值；f为镜头焦距；L为对焦距离；$\delta$为容许弥散圆直径，其最小值为像素单元尺寸；</li>
 </ul>
 </li>
 </ol>
