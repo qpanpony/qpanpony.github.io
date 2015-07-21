@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-07-21T02:49:21.269Z</updated>
+  <updated>2015-07-21T02:56:20.799Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://qpanpony.github.io/2015/07/21/CameraSelection/"/>
     <id>http://qpanpony.github.io/2015/07/21/CameraSelection/</id>
     <published>2015-07-21T01:46:59.000Z</published>
-    <updated>2015-07-21T02:49:21.269Z</updated>
+    <updated>2015-07-21T02:56:20.799Z</updated>
     <content type="html"><![CDATA[<p>这些天在考虑一个前端图像采集系统的方案，涉及到相机和镜头的选型，一些步骤和参数计算整理如下。<a id="more"></a></p>
 <ol>
 <li>选择相机的类型：<blockquote>
@@ -31,27 +31,50 @@
 </li>
 <li>选择图像分辨率和帧率；<blockquote>
 <ul>
-<li>图像分辨率举例：2456 $\times$ 2058</li>
+<li>图像分辨率举例：2456 $$\times$$ 2058</li>
 <li>帧率举例：15 fps</li>
 </ul>
 </blockquote>
 </li>
-<li>选择相机传感器尺寸：<blockquote>
+<li>选择相机传感器尺寸和像素尺寸：<blockquote>
 <ul>
 <li>面阵传感器尺寸举例：2/3”</li>
+<li>像素尺寸举例：3.45</li>
 <li>常用面阵传感器尺寸</li>
 </ul>
 </blockquote>
 </li>
 </ol>
-<blockquote>
-<ul>
-<li>| 参数 | 1英寸 | 2/3英寸 | 1/2英寸 | 1/3英寸 | 1/4英寸 |</li>
-<li>| :—— | —— | —— | —— | —— | —— |</li>
-<li>| 对角线 <br> (mm) | 16 | 11 | 8 | 6 | 4 |</li>
-<li>| 幅面尺寸 <br> (mm) | 12.8 \times 9.6 | 8.8 \times 6.6 | 6.4 \times 4.8 | 4.8 \times 3.6 | 3.6 \times 2.7 |</li>
-</ul>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th>1英寸</th>
+<th>2/3英寸</th>
+<th>1/2英寸</th>
+<th>1/3英寸</th>
+<th>1/4英寸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">对角线 <br> (mm)</td>
+<td>16</td>
+<td>11</td>
+<td>8</td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr>
+<td style="text-align:left">幅面尺寸 <br> (mm)</td>
+<td>12.8 \times 9.6</td>
+<td>8.8 \times 6.6</td>
+<td>6.4 \times 4.8</td>
+<td>4.8 \times 3.6</td>
+<td>3.6 \times 2.7</td>
+</tr>
+</tbody>
+</table>
 <ol>
 <li><p>选择镜头：</p>
 <blockquote>
@@ -61,12 +84,10 @@
 </blockquote>
 </li>
 <li><p>计算系统放大倍率：</p>
-<blockquote>
 <ul>
 <li>$$\beta = \frac{传感器尺寸最小边}{对应的拍摄区域尺寸最小边} $$</li>
 <li>举例：$$\beta = \frac{6.6 mm}{15 m} = 4.4 \times 10^{-4} $$</li>
 </ul>
-</blockquote>
 </li>
 </ol>
 ]]></content>
