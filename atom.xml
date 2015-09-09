@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-07-21T04:28:07.596Z</updated>
+  <updated>2015-09-09T22:08:10.698Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[说说VLP]]></title>
+    <link href="http://qpanpony.github.io/2015/09/10/VLP/"/>
+    <id>http://qpanpony.github.io/2015/09/10/VLP/</id>
+    <published>2015-09-09T21:31:50.000Z</published>
+    <updated>2015-09-09T22:08:10.698Z</updated>
+    <content type="html"><![CDATA[<p>可见光通信(VLC,Visible Light Communication)最近得到了越来越多的技术关注。这里来说说Visible Light Positioning, 即VLP。<br>基于VLC技术的VLP可用于室内定位和导航。室内LED的逐步使用可为VLP的运用提供了客观的部署条件，VLP目前已可以达到亚米级的室内精度。<a id="more"></a></p>
+<p>与WIFI等采用RF进行无线定位方法不同，VLP使用可见光。为了避免光源的闪烁，要求光源发射端采用相对较高的脉冲频率，比如大于1kHz，如果以移动终端相机为接收端，这是一个较大挑战，通常的相机仅30fps（好的相机如iphone运动捕获模式可达250fps），远低于1kHz。VLP大多采用基于强度的调制，不过，微软亚洲研究院在Mobisys’15发表研究成果指出，如果使用光的偏振属性，可以构建基于偏振调制的VLP系统，即polarization-based VLP，这个系统对接收端终端采样频率低很多，非常适合构建基于日常手机终端、可穿戴设备的轻量级VLP系统，非常有创新性。</p>
+<p>VLP系统特性非常适合室内高精度定位，看看哪家公司能快速提供可商用的产品了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>可见光通信(VLC,Visible Light Communication)最近得到了越来越多的技术关注。这里来说说Visible Light Positioning, 即VLP。<br>基于VLC技术的VLP可用于室内定位和导航。室内LED的逐步使用可为VLP的运用提供了客观的部署条件，VLP目前已可以达到亚米级的室内精度。]]>
+    
+    </summary>
+    
+      <category term="技术参考" scheme="http://qpanpony.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[相机的选择]]></title>
