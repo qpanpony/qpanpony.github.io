@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-09-09T22:13:57.061Z</updated>
+  <updated>2015-10-02T00:26:50.824Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[旋转矩阵的Rodrigues描述]]></title>
+    <link href="http://qpanpony.github.io/2015/10/02/rod/"/>
+    <id>http://qpanpony.github.io/2015/10/02/rod/</id>
+    <published>2015-10-01T23:57:38.000Z</published>
+    <updated>2015-10-02T00:26:50.824Z</updated>
+    <content type="html"><![CDATA[<p>在相机标定过程中，会涉及多个不同坐标系的变换和旋转矩阵的使用。直接写旋转矩阵R会有9个参数，但它们是非独立参数，实际上$\textbf{R}$仅有3个自由度。Rodrigues描述形式使用向量来表示旋转，向量的取向代表转动轴，向量的幅度代表刚体绕转动轴顺时针旋转的角度。<a id="more"></a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在相机标定过程中，会涉及多个不同坐标系的变换和旋转矩阵的使用。直接写旋转矩阵R会有9个参数，但它们是非独立参数，实际上$\textbf{R}$仅有3个自由度。Rodrigues描述形式使用向量来表示旋转，向量的取向代表转动轴，向量的幅度代表刚体绕转动轴顺时针旋转的角度。]]>
+    
+    </summary>
+    
+      <category term="Camera" scheme="http://qpanpony.github.io/tags/Camera/"/>
+    
+      <category term="Positioning" scheme="http://qpanpony.github.io/tags/Positioning/"/>
+    
+      <category term="技术参考" scheme="http://qpanpony.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[说说VLP]]></title>

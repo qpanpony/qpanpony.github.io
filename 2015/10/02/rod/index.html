@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="SIoT," />
+  <meta name="keywords" content="Camera,Positioning," />
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <title> 谈谈SIoT: Social Internet of Things // Pony的博客 </title>
+  <title> 旋转矩阵的Rodrigues描述 // Pony的博客 </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              谈谈SIoT: Social Internet of Things
+              旋转矩阵的Rodrigues描述
             
           
         </h1>
@@ -146,14 +146,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-11
+          发表于 2015-10-01
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="../../../../categories/闭眼瞎评/">闭眼瞎评</a>
+              <a href="../../../../categories/技术参考/">技术参考</a>
 
               
               
@@ -174,49 +174,7 @@
       
 
       
-        <p>Social IoT: Social Internet of Things这个词，我能查到的，应该是Luigi Atzori等人在IEEE Communications Letters发表的名为“SIoT：Giving a social structure to the internet of things, 2011”的论文中正式出现的。此后，University of Cagliari的这个研究组陆续在Computer Networks(The Social Internet of things (SIoT)-when social networks meet the internet of things: Concept, architecture and network characterization, 2012)、IEEE Communication Magazine (From “smart Objects” to “social objects”: The next evolutionary step of the internet of thngs, 2014)发表多篇有关SIoT的论文。从字面上理解，SIoT就是要探讨将社会关系网络纳入物联网的技术潜力，中文上，我觉得“社会物联网络”是一个合适的中文词。<br><a id="more"></a></p>
-<p>人类有哪些基本关系类型？Fiske在综合人类学、社会心理学和社会学的研究及理论基础上，提出了目前被广泛接受的4种人类基本关系类型，即：</p>
-<ul>
-<li><p>公共共享(Communal sharing)</p>
-</li>
-<li><p>等级排序(Authority ranking)</p>
-</li>
-<li><p>平等匹配(Equality matching)</p>
-</li>
-<li><p>市场定价(Market pricing)</p>
-</li>
-</ul>
-<p>不明白？确实，现在把人类的这些基本关系类型直接引入到物物对象之间是还有些远。</p>
-<p>那说说Luigiz Atzori定义的相对具体的对象间关系类型：</p>
-<ul>
-<li><p>POR: Parental object relationship</p>
-</li>
-<li><p>C-LOR:Co-location object relationship</p>
-</li>
-<li><p>C-WOR: Co-work object relationship</p>
-</li>
-<li><p>OOR: Ownership object relationship</p>
-</li>
-<li><p>SOR: Social object relationship</p>
-</li>
-</ul>
-<p>有关对象间关系类型，之前（好吧，其实是一年半前…）我琢磨过一段时间，把它进行重新整理成以下社会物联网络群组关系类型：</p>
-<ul>
-<li>本征关系<ul>
-<li>基于生产制造者的关系(PR: Parental Relationship)</li>
-<li>基于所有者的关系(OR: Ownership Relationship)</li>
-</ul>
-</li>
-<li>非本征关系<ul>
-<li>基于动态物理位置的关系(LR: Location Relationship)</li>
-<li>基于任务的关系(TR: Task Relationship)</li>
-<li>基于事件的关系(ER: Event Relationship)</li>
-<li>基于特征指标的关系(MR: Metrics Relationship)</li>
-<li>基于用户/服务对象的关系(UR: User Relationship)</li>
-</ul>
-</li>
-</ul>
-<p>本来在此基础上整理一份有关社会物联网络关系群组建立方法的专利，可惜公司内部评审的专家给了差评，好吧，you can you up, no can no BB!</p>
+        <p>在相机标定过程中，会涉及多个不同坐标系的变换和旋转矩阵的使用。直接写旋转矩阵R会有9个参数，但它们是非独立参数，实际上$\textbf{R}$仅有3个自由度。Rodrigues描述形式使用向量来表示旋转，向量的取向代表转动轴，向量的幅度代表刚体绕转动轴顺时针旋转的角度。<a id="more"></a></p>
 
       
     </div>
@@ -225,7 +183,9 @@
       
         <div class="post-tags">
           
-            <a href="../../../../tags/SIoT/"> #SIoT </a>
+            <a href="../../../../tags/Camera/"> #Camera </a>
+          
+            <a href="../../../../tags/Positioning/"> #Positioning </a>
           
         </div>
       
@@ -234,13 +194,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="../IoT/">物联网的美文</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../08/Markdown-Style-Guide/">Markdown使用小结</a>
+              <a href="../../../09/10/VLP/">说说VLP</a>
             
           </div>
         </div>
