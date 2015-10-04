@@ -4,7 +4,7 @@
   <subtitle><![CDATA[困在物理世界的数据中]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qpanpony.github.io/"/>
-  <updated>2015-10-04T00:51:15.822Z</updated>
+  <updated>2015-10-04T01:16:01.710Z</updated>
   <id>http://qpanpony.github.io/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://qpanpony.github.io/2015/10/02/rod/"/>
     <id>http://qpanpony.github.io/2015/10/02/rod/</id>
     <published>2015-10-01T23:57:38.000Z</published>
-    <updated>2015-10-04T00:51:15.822Z</updated>
+    <updated>2015-10-04T01:16:01.710Z</updated>
     <content type="html"><![CDATA[<p>在相机标定过程中，会涉及多个不同坐标系的变换和旋转矩阵的使用。直接写旋转矩阵$\textbf{R}$会有9个参数，但它们是非独立参数，实际上$\textbf{R}$仅有3个自由度。Rodrigues描述形式使用向量来表示旋转，向量的取向代表转动轴，向量的幅度代表刚体绕转动轴顺时针旋转的角度。<a id="more"></a></p>
 <p>假如用3维向量$\textbf{w} = \left[\begin{array}{cc} w_x &amp; w_y &amp; w_z \end{array}\right]^T$代表刚体旋转，则转动轴为：$$\frac{\textbf{w}}{\begin{Vmatrix}{\textbf{w}}\end{Vmatrix}}$$旋转角度为：$$\phi=\begin{Vmatrix}\textbf{w}\end{Vmatrix}$$</p>
 <ol>
 <li><p>由$\textbf{w}$得到$\textbf{R}$的方法<br>定义矩阵$\textbf{x}$如下：$$\textbf{x} = \begin{bmatrix} 0&amp;-w_x&amp;w_y \ w_z&amp;0&amp;-w_x \ -w_y&amp;w_x&amp;0 \end{bmatrix}$$<br>则$\textbf{R}$可表示如下：$$\textbf{R} = e^{\textbf{x}} = \textbf{I} + \frac{sin(\begin{Vmatrix}\textbf{w}\end{Vmatrix})}{\begin{Vmatrix}\textbf{w}\end{Vmatrix}}\textbf{x} + \frac{1-cos(\begin{Vmatrix}\textbf{w}\end{Vmatrix})}{(\begin{Vmatrix}\textbf{w}\end{Vmatrix})^2}(\textbf{x})^2$$</p>
 </li>
-<li><p>由$\textbf{R}$得到$\textbf{w}$的方法<br>假定$\textbf{R}$（$\textbf{R}$ \neq \textbf{I}）定义如下：<br>$$\textbf{R} = \begin{bmatrix} r<em>11&amp;r_12&amp;r_13 \ r_21&amp;r_22&amp;r_23 \ r_31&amp;r_32&amp;r_33 \end{bmatrix}$$<br>则$\textbf{w} = \left[\begin{array}{cc} w_x &amp; w_y &amp; w_z \end{array}\right]^T$可表示为：<br>$$\begin{Vmatrix}\textbf{w}\end{Vmatrix} = cos^(-1)\left( \frac{trace(\textbf{R})-1}{2} \right)$$<br>$$\frac{\textbf{w}}{\begin{Vmatrix}{\textbf{w}}\end{Vmatrix}} = \frac{1}{2sin(\begin{Vmatrix}{\textbf{w}}\end{Vmatrix})} \left{ \begin{matrix} r</em>{32}-r<em>{23} \ r</em>{13}-r<em>{31} \ r</em>{21}-r_{12}  \end{matrix} \right}$$</p>
+<li><p>由$\textbf{R}$得到$\textbf{w}$的方法<br>假定$\textbf{R}$（$\textbf{R} \neq \textbf{I}$）定义如下：<br>$$\textbf{R} = \begin{bmatrix} r<em>11&amp;r_12&amp;r_13 \ r_21&amp;r_22&amp;r_23 \ r_31&amp;r_32&amp;r_33 \end{bmatrix}$$<br>则$\textbf{w} = {\left[\begin{array}{cc} w_x &amp; w_y &amp; w_z \end{array}\right]}^T$可表示为：<br>$$\begin{Vmatrix}\textbf{w}\end{Vmatrix} = cos^(-1)\left( \frac{trace(\textbf{R})-1}{2} \right)$$<br>$$\frac{\textbf{w}}{\begin{Vmatrix}{\textbf{w}}\end{Vmatrix}} = \frac{1}{2sin(\begin{Vmatrix}{\textbf{w}}\end{Vmatrix})} \left{ \begin{matrix} r</em>{32}-r<em>{23} \ r</em>{13}-r<em>{31} \ r</em>{21}-r_{12}  \end{matrix} \right}$$</p>
 </li>
 </ol>
 ]]></content>
